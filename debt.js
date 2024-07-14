@@ -5,7 +5,13 @@
     .then((response) => response.json())
     .then((data) => {
       var amount = data.data[0].tot_pub_debt_out_amt;
-      alert("The United States total public outstanding debt is " + new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(amount));
+      alert(
+        "The United States total public outstanding debt is " +
+          new Intl.NumberFormat("en-US", {
+            style: "currency",
+            currency: "USD",
+          }).format(amount),
+      );
     })
     .catch((error) => console.error("Error:", error));
 })();
